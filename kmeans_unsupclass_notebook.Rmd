@@ -1,0 +1,72 @@
+---
+title: "Unsupervised Classification Notebook"
+output: html_notebook
+---
+In this notebook you will use the same Iris dataset to do an unsupervised classification. 
+
+```{r}
+# This code sets the random seed, which makes sure that the kmeans() function generates random numbers. Don't remove this line. 
+set.seed(1)
+```
+
+
+```{r}
+# load in the iris dataset
+setwd("~/Documents/AMNH/R/IntroductionToR/data")
+iris <- read.csv("iris.csv", header=TRUE)
+```
+
+
+```{r}
+# make a new variable called my_iris that contains first 4 columns of iris
+# make a variable called species that contains the species column of iris
+species2 <- iris[,5] 
+```
+
+
+```{r}
+# Perform k-means clustering on my_iris using the kmeans() function and save the output to new variable called kmeans_iris
+kmeans_iris <- kmeans(my_iris,3)
+```
+
+
+```{r}
+# what are the components of our new variable, kmeans_iris? Use 2 of our data exploration functions to find out. 
+# what does each function output tell us about kmeans_iris?
+str(kmeans_iris)
+summary(kmeans_iris)
+```
+
+
+```{r}
+# Compare the species observation data to the clustering result using table()
+# table() compares the actual species observations to the groups that the clustering algorithm came up with. 
+# hint: you want to use table() to compare species and the cluster attribute of kmeans_iris
+table(species,kmeans_iris$cluster)
+```
+
+
+```{r}
+# Plot Petal.Width against Petal.Length, coloring by cluster
+plot(Petal.Length ~ Petal.Width, data = my_iris, col = kmeans_iris$cluster)
+# tilde shows independent and dependent variables
+```
+
+
+```{r}
+# what happens if you try to perform kmeans clustering with 4 clusters instead? Are any of your code outputs different? What about with 2 clusters?
+
+# 4 clusters:
+kmeans4_iris <- kmeans(my_iris,4)
+summary(kmeans4_iris)
+table(species,kmeans4_iris$cluster)
+plot(Petal.Length ~ Petal.Width, data = my_iris, col = kmeans4_iris$cluster)
+
+# 2 clusters: 
+kmeans2_iris <- kmeans(my_iris,2)
+summary(kmeans2_iris)
+table(species,kmeans2_iris$cluster)
+plot(Petal.Length ~ Petal.Width, data = my_iris, col = kmeans2_iris$cluster)
+```
+
+Adapted from: 
