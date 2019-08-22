@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=MyWorld
+comment0.text=\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ addCounter()
+comment3.params=
+comment3.target=int\ getCounter()
+comment4.params=
+comment4.target=MyWorld()
+comment4.text=\n\ Constructor\ for\ objects\ of\ class\ MyWorld.\n\ \n
+comment5.params=
+comment5.target=void\ prepare()
+comment5.text=\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\n\ That\ is\:\ create\ the\ initial\ objects\ and\ add\ them\ to\ the\ world.\n
+numComments=6
