@@ -1,4 +1,4 @@
-""" defines the maxpixels function that will find the smallest polygon's area"""
+"""defines the maxpixels function that will find the smallest polygon's area - R """
 
 maxpixels <- function(polygon){
   a <- 0
