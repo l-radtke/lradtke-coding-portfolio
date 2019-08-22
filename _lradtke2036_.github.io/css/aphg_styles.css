@@ -1,0 +1,35 @@
+body {
+
+	font-family: serif;
+	display: block;
+  	font-size: 16px;
+  	margin-top: 1.33em;
+  	margin-bottom: 1.33em;
+ 	font-weight:normal;
+ 	padding: 15px;
+ 	line-height: 112%;
+ 	font-size: 18px;
+	background-color:#0A81D1;
+	color:#0D0630;
+}
+
+
+.pearson {
+	font-size: 14px;
+	line-height: 25%;
+}
+
+
+h3{
+	font-family: sans-serif;
+	color:#D8E1FF;
+	font-size:26px;
+}
+
+/*
+#0D0630: very dark blue;
+#314CB6 = dark blue 
+#0A81D1 = lighter blue
+#B8E1FF = pale blue
+#FEF9FF = light lavender
+*/
