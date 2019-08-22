@@ -68,5 +68,3 @@ summary(kmeans2_iris)
 table(species,kmeans2_iris$cluster)
 plot(Petal.Length ~ Petal.Width, data = my_iris, col = kmeans2_iris$cluster)
 ```
-
-Adapted from: 
